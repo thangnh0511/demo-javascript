@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Biến</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">  
+    <style>
+        .box { 
+            width:500px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #000;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            background: #fff;
+        }
+
+        .box .input-box {
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box row">
+            <h3>Hình tròn</h3>
+            <div class="input-box">
+                <label for="r">Nhập bán kính R</label> <input type="number" id="r">
+            </div>
+            <a onclick="hinhtron()" class="btn btn-primary">Tính</a>
+            <div id="result"></div>
+        </div>
+        <!-- Tạo thư -->
+        <div class="box row">
+            <h3>Thư của Marilyn Monroe</h3>
+            <div class="input-box">
+                <label for="name">Tên người nhận: </label> <input type="text" placeholder="Tên người nhận" id="name">
+            </div>
+            <div class="input-box">
+                <label for="address">Địa điểm: </label><input type="text" placeholder="Địa điểm" id="address">
+            </div>
+            <div class="input-box">
+                <label for="date">ngày: </label><input type="datetime" placeholder="ngày gửi" id="date">
+            </div>
+            <div class="input-box">
+                <label for="month">tháng: </label><input type="datetime" placeholder="ngày gửi" id="month">
+            </div>
+           <div class="input-box">
+                <label for="year">năm: </label><input type="datetime" placeholder="ngày gửi" id="year">
+           </div>
+            <a onclick="marilynMessage()" class="btn btn-primary">Mần thư</a>
+            <div id="marilyn_mess"></div>
+        </div>
+        <!-- Chuyển đổi tiền tệ -->
+        <div class="bow row">
+
+        </div>
+    </div>
+    <script src="./function.js"></script>
+</body>
+</html>

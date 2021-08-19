@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập Máy tính - Tính tuổi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">  
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Máy tính cầm tay</div>
+        <div class="calculator">
+            <div class="screen">
+                <div id="result">0</div>
+            </div>
+            <button class="item item-1" onclick="acButton()">AC</button>
+            <button class="item item-2" onclick="enterInput('%')">%</button>
+            <button class="item item-3" onclick="enterInput('/')">/</button>
+            <button class="item item-4" onclick="enterInput(7)">7</button>
+            <button class="item item-5" onclick="enterInput(8)">8</button>
+            <button class="item item-6" onclick="enterInput(9)">9</button>
+            <button class="item item-7" onclick="enterInput('*')">x</button>
+            <button class="item item-8" onclick="enterInput(4)">4</button>
+            <button class="item item-9" onclick="enterInput(5)">5</button>
+            <button class="item item-10" onclick="enterInput(6)">6</button>
+            <button class="item item-11" onclick="enterInput('-')">-</button>
+            <button class="item item-12" onclick="enterInput(1)">1</button>
+            <button class="item item-13" onclick="enterInput(2)">2</button>
+            <button class="item item-14" onclick="enterInput(3)">3</button>
+            <button class="item item-15" onclick="enterInput('+')">+</button>
+            <button class="item item-16" onclick="enterInput(0)">0</button>
+            <button class="item item-17" onclick="enterInput('.')">.</button>
+            <button class="item item-18" onclick="executeCalc()">=</button>
+        </div>
+    </div>
+    <div class="title">Tính tuổi</div>
+    <div class="age-calc">
+        <div class="age-item age-item-1">
+            <label for="age">
+                Nhập tuổi
+            </label>
+            <input type="date" id="age">
+        </div>
+        <div class="age-item age-item-2">
+            <button onclick="calcAge()">Tính tuổi</button>
+            <div id="age-result"></div>
+        </div>
+    </div>
+    <script src="./baitap.js"></script>
+</body>
+</html>

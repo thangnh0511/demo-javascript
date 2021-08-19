@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background:  linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+
+.title {
+    width: 500px;
+    font-size: 30px;
+    margin: 20px auto ;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.calculator {
+    width: 500px;
+    min-height: 50px;
+    display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 4px;
+    margin: auto;
+    background: #F0E4D7;
+    padding: 20px 10px;
+    border-radius: 4px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.screen {
+    height: 70px;
+    background-color: #ccc;
+    grid-area: 1/span 4;
+    background: #9FD8DF;
+    border-radius: 4px;
+    padding: 0px 20px;
+    line-height: 70px;
+    margin-bottom: 5px;
+}
+#result { 
+    color: #435560;
+    font-size: 40px;
+    text-align: right;
+    font-family: monospace;
+}
+
+.item {
+    height: 50px;
+    border: 1px solid #464646;
+    border-radius: 4px;
+    background: #F0E4D7;
+}
+
+.item-1 { 
+    grid-area: 2/span 2;
+    background: #FF7171;
+}
+
+.item-18 {
+    grid-area: 6/3/6/5;
+    background: #5EAAA8;
+}
+
+.item:hover { 
+    background: #716F81;
+    color: #fff;
+}
+.item-18:hover {
+    background-color: #056676;
+    
+}
+.item-1:hover {
+    background: #D35D6E;
+}
+
+/* ------------- */
+
+.age-calc {  
+    width: 500px;
+    min-height: 50px;
+    display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 4px;
+    margin: auto;
+    background: #FBF7F0;
+    padding: 20px 10px;
+    border-radius: 4px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.age-item {
+    height: 40px;
+    border-radius: 20px;
+    border: 1px transparent #555555;
+    text-align: center;
+    line-height: 40px;
+}
+
+.age-item-1 {
+    grid-area: 1/span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #A0C1B8;
+    padding: 0px 6px;
+
+}
+
+.age-item-1 > label {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#age {
+    height: 28px;
+    align-self: center;
+    border-radius: 16px;
+    border: none;
+    padding: 0px 20px;
+}
+
+.age-item-2 {
+    margin-top: 10px;
+    grid-area: 2/span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #A0C1B8;
+    border-radius: 20px;
+}
+
+.age-item-2 >button {
+    background: #056676;
+    height: 40px;
+    align-self: center;
+    border-radius: 20px;
+    border: none;
+    padding: 0px 20px;
+    color: #fff;
+    font-weight: 500;
+}
+#age-result {
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 24px;
+    font-family: monospace;
+}
+
+button:hover { 
+    opacity: .8;
+}

@@ -118,7 +118,6 @@ function reset() {
 
 function calculating() {
     let result = document.getElementById('showCalc').innerHTML;
-
     document.getElementById('showCalc').innerHTML = eval(result);
    
 }

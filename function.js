@@ -28,6 +28,9 @@ function marilynMessage() {
     <p>${address}, ngày ${date} tháng ${month} năm ${year}."</p>`;
 }
 
+
+
+
 function currencyExchange() {
     let money = document.getElementById('money').value;
     var exFrom = document.getElementById('exchange-from').value;
@@ -44,9 +47,9 @@ function currencyExchange() {
     if (exTo === "usd") {
         var exTo = 1;
     } else {
-        var exTo = exRate; 
-        
+        var exTo = exRate;   
     }
+
     console.log(exFrom);
     console.log(exTo);
     let exMoney = +(money*exTo)/exFrom;
@@ -55,3 +58,68 @@ function currencyExchange() {
 
 
 }
+
+
+// AGE CALCULATE
+function ageCalc() {
+    let myBirthday= document.getElementById('birthday').value;
+    let birthday = new Date(myBirthday);
+    let today = new Date();
+    let myAge = 0;
+
+    if (today.getMonth() > birthday.getMonth()){
+        myAge = today.getFullYear() -  birthday.getFullYear(); 
+        console.log('cái này true');
+    } else {
+        if(today.getDate() >= birthday.getDate()){
+            myAge = today.getFullYear() -  birthday.getFullYear(); 
+        } else {
+            myAge = (today.getFullYear() -  birthday.getFullYear()) - 1; 
+        }
+    }
+    console.log(typeof myAge);
+
+    
+    document.getElementById('age')
+    document.getElementById('age').innerHTML = '<b>' +  myAge + '</b>';
+}
+
+
+// Tinh toan 
+function calculate() {
+    let num1 = document.getElementById('calc-1').value;
+    let toanTu = document.getElementById('calc-2').value;
+    let num2 = document.getElementById('calc-3').value;
+
+    result = eval(num1 + toanTu + num2);
+
+    const phepChia = "/";
+    if (toanTu == "/" && num2 == 0) {
+        alert('Không tính được');
+        return;
+    } 
+
+    document.getElementById('calc-result').innerHTML = result;
+
+}
+
+
+
+// Máy tính     
+
+function enterInput (key) {
+    document.getElementById('showCalc').innerHTML += key;
+}
+
+function reset() {
+    document.getElementById('showCalc').innerHTML = '';
+}
+
+
+function calculating() {
+    let result = document.getElementById('showCalc').innerHTML;
+
+    document.getElementById('showCalc').innerHTML = eval(result);
+   
+}
+

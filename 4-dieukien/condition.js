@@ -128,7 +128,7 @@ function compare(date, date2) {
     let chiNu = chi(birthday2);
     let message = '';
 
-    if (chiNu == chiNam || chiNu == chiNam + (360/12)*4 || chiNu == chiNam + (360/12)*8) {
+    if (chiNu == chiNam || chiNu == chiNam + (360/12)*3 || chiNu == chiNam + (360/12)*7) {
         message += `<h1 style="text-alignt:center;">Matching</h1><img src="./icon/giphy.gif" alt="" class="result-compare">
         `;
     } else {

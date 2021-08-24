@@ -1,0 +1,75 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    background-color: #B5FFD9;
+}
+
+#game {
+    width: 500px;
+    height: 500px;
+    border: 1px solid #000;
+    margin: 50px auto;
+    position: relative;
+    background: #F3F1F5;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.tank-object {
+    width: 50px;
+    position: absolute;
+    transform: rotate();
+}
+
+
+/* --------- Control ----------- */
+
+#game-control {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    display: flex;
+        flex-flow: nowrap column;
+    font-size: 20px;
+}
+
+#game-control  button {
+    border: none;
+    color: #fff;
+    background-color: transparent;
+    border-radius: 16px;
+    height: 50px;
+    width:50px;
+
+}
+
+#game-control button:hover {
+    background: #B61919;
+}
+
+.up-btn {
+    align-self: center;
+    background-color: #3E00FF;
+    border-radius: 16px 16px 0px 0px;
+
+}
+.down-btn {
+    align-self: center;
+    background-color: #3E00FF;
+    border-radius: 0px 0px 16px 16px;
+
+}
+
+.left-right-btn {
+    width: 100%;
+    display: flex;
+    background-color: #3E00FF;
+    justify-content: space-between;
+    border-radius: 16px;
+}
+
+
+

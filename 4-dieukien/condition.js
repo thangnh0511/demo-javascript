@@ -138,9 +138,12 @@ function compare(date, date2) {
     //     `;
     // }
    
-    if (compare == 0 || compare == 4 || compare  == 8) {
-        message += `<h1 style="text-alignt:center;">Matching</h1><img src="./icon/giphy.gif" alt="" class="result-compare">
+    if (compare == 4) {
+        message += `<h1 style="text-alignt:center;">Matching Cực hợp</h1><img src="./icon/giphy.gif" alt="" class="result-compare">
         `;
+    } else if (compare == 6) {
+        message += `<h1 style="text-alignt:center;">Tứ Hành xung</h1>
+        <img src="./icon/doge.jpg" alt="" class="result-compare">`; 
     } else {
         message += `<h1 style="text-alignt:center;">Not Match</h1>
         <img src="./icon/doge.jpg" alt="" class="result-compare">`; 

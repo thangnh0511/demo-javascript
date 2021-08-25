@@ -1,0 +1,103 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    background-color: #B5FFD9;
+}
+
+#screen {
+    width: 300px;
+    background: #FFF7AE;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-around;
+    margin: 50px auto;
+    border-radius: 18px;
+}
+#touch-time {
+    width: 50px;
+    border-radius: 50%;
+    background: #B61919;
+}
+#touch-time h2{
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    margin: 6px 0px;
+}
+
+#game {
+    width: 500px;
+    height: 500px;
+    border: 1px solid #000;
+    margin: 50px auto;
+    position: relative;
+    background: #F3F1F5;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.tank-object {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transform: rotate();
+    background: #3E00FF;
+}
+.boom {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background: #B61919;
+}
+
+/* --------- Control ----------- */
+
+#game-control {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    display: flex;
+        flex-flow: nowrap column;
+    font-size: 20px;
+}
+
+#game-control  button {
+    border: none;
+    color: #fff;
+    background-color: transparent;
+    border-radius: 16px;
+    height: 50px;
+    width:50px;
+
+}
+
+#game-control button:hover {
+    background: #B61919;
+}
+
+.up-btn {
+    align-self: center;
+    background-color: #3E00FF;
+    border-radius: 16px 16px 0px 0px;
+
+}
+.down-btn {
+    align-self: center;
+    background-color: #3E00FF;
+    border-radius: 0px 0px 16px 16px;
+
+}
+
+.left-right-btn {
+    width: 100%;
+    display: flex;
+    background-color: #3E00FF;
+    justify-content: space-between;
+    border-radius: 16px;
+}
+
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do U love me ?</title>
+    <style>
+   * {
+        margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    .container {
+        width: 1200px;
+        min-height: 100vh;
+        margin: auto;
+        position: relative;
+    }
+
+    button {
+        width: 100px;
+        min-height: 60px;
+        background: paleturquoise;
+        position: absolute;
+        border-radius: 8px;
+
+    }
+
+    #no {
+        left: 200px;
+    }
+    </style>
+ 
+</head>
+<body>
+    <div class="container">
+        <h1>Do you love me ?</h1>
+        <button id="yes">Yes</button>
+        <button id="no" onmouseover="changePositionBtn()">No</button>
+    </div>
+    <script src="function.js"></script>
+</body>
+</html>

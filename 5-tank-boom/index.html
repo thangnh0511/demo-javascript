@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game xe tank</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div id="screen">
+        <h2>touch time</h2>
+        <div  id="touch-time">
+            <h2 id="touch">0</h2>
+        </div>
+      </div>
+      <div id="game">
+        <div class="tank-object" id="tank" style="top: 40px; left: 40px"></div>
+        <!-- <img
+          src="./img/logo-2-1 copy 3.svg"
+          alt=""
+          class="tank-object"
+          id="tank"
+          style="top: 40px; left: 40px"
+        /> -->
+        <div id="boom" class="boom" style="top: 150px; left: 150px"></div>
+      </div>
+      <div id="game-control">
+        <div class="up-btn">
+          <button onclick="moveUp()">
+            <i class="fas fa-arrow-up"></i>
+          </button>
+        </div>
+        <div class="left-right-btn">
+          <button onclick="moveLeft()">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <button onclick="moveRight()">
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+        <div class="down-btn">
+          <button onclick="moveDown()">
+            <i class="fas fa-arrow-down"></i>
+          </button>
+        </div>
+      </div>
+      <!-- <input type="text" onchange="onChangeDemo()">
+        <input type="text" onkeyup="onChangeDemo()">
+        <input type="text" onkeypress="onChangeDemo()"> -->
+      <!-- <input type="text" onkeyup="onkeyupDemo()" id="input">
+        <div id="content"></div> -->
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>

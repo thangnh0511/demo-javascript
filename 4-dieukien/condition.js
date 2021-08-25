@@ -126,9 +126,19 @@ function compare(date, date2) {
 
     let chiNam = chi(birthday); 
     let chiNu = chi(birthday2);
+    let compare = Math.abs((chiNam - chiNu));
     let message = '';
 
-    if (chiNu == chiNam || chiNu == chiNam + (360/12)*3 || chiNu == chiNam + (360/12)*7) {
+    // if (compare == 0 || compare == 3 || compare == 6 || compare ==9){
+    //     message += `<h1 style="text-alignt:center;">Tam hợp</h1>
+    //     <img src="./icon/doge.jpg" alt="" class="result-compare">`; 
+    // } else {
+    //     message += `<h1 style="text-alignt:center;">OkeLa</h1>
+    //     <img src="./icon/giphy.gif" alt="" class="result-compare">
+    //     `;
+    // }
+   
+    if (compare == 0 || compare == 4 || compare  == 8) {
         message += `<h1 style="text-alignt:center;">Matching</h1><img src="./icon/giphy.gif" alt="" class="result-compare">
         `;
     } else {
@@ -142,7 +152,9 @@ function compare(date, date2) {
 function chi(date) {
     let birthday = new Date(date) ;
     let birthdayYear = birthday.getFullYear();
-    let chi = (birthdayYear%12 + 1) * (360/12);
+    // let chi = (birthdayYear%12) * (360/12);
+    let chi = (birthdayYear%12 +1);
+
 
     console.log(chi);
     return chi;

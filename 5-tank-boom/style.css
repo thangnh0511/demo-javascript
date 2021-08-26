@@ -14,7 +14,7 @@ body{
     display: flex;
     flex-flow: wrap row;
     justify-content: space-around;
-    margin: 50px auto;
+    margin: 14px auto -43px;
     border-radius: 18px;
 }
 #touch-time {
@@ -58,7 +58,7 @@ body{
 #game-control {
     width: 150px;
     height: 150px;
-    margin: auto;
+    margin: -25px auto 0px;
     display: flex;
         flex-flow: nowrap column;
     font-size: 20px;

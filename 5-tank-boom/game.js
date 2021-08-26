@@ -74,11 +74,6 @@ function randomBoom() {
     return boom;
 }
 
-function touchTime(number) {
-    let numbetOfTouch = number + 1;
-    console.log(numberOfTouch);
-    return numberOfTouch;
-}
 
 exploreTank();
 

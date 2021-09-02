@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+    background: #FFF5EB;
+    display: flex;
+    align-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 500px;
+    min-height: 250px;
+    background: #DEEDF0;
+    margin: auto;
+    padding: 20px;
+    border-radius: 18px;
+    display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+}
+
+#result, #text-result {
+    margin-left: 20px;
+    color: #444444;
+}
+
+.button {
+    display: flex;
+        flex-flow: row;
+        align-items: center;
+    margin-left: 10px;
+}
+.button h1 {
+    margin-left: 20px;
+    color: #444444;
+}
+
+.tick-icon {
+    width: 80px;
+    height: 20px;
+    background: #A6A9B6;
+    border-radius: 16px;
+    margin-right: 20px;
+    position: relative;
+    transform: .5s;
+}
+
+.circle {
+    position: absolute;
+    width: 35px; height: 35px;
+    border-radius: 50%;
+    background: #7F7C82;
+    right: 45px;
+    top: -7px;
+    transition: .3s;
+}
+
+#good:hover{
+    background: #DDFFBC;
+}
+/* #good:hover .circle {
+    right: 0;
+    background: #91C788;
+} */
+
+#cheap:hover {background: #8AB6D6;}
+
+#fast:hover {background: #FF5722;}
+
+.good { background: #91C788;}
+
+.cheap {right: 0; background: #2978B5;}
+
+.fast {right: 0; background: #DD2C00;}

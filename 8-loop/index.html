@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop</title>
+    <link rel="stylesheet" href="./gfc.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-auto">
+                <label for="" class="col-form-label">Month</label>
+            </div>
+            <div class="col-auto">
+                <input type="number" id="month" class=" form-control"> 
+            </div>
+            <div class="col-auto">
+                <span class="form-text">Input number between 1 and 12</span>
+            </div>
+            <div class="col-auto">
+                <button class="btn btn-secondary" onclick="calendarMaker()">Generate</button>
+            </div>
+        </div>
+        <!-- <div class="row justify-content-center align-items-center">
+           <div class="col-auto">
+                <input type="text" id="month-text" class=" form-control" value="" readonly>
+           </div>
+        </div> -->
+        <table class="table text-center" id="calendar">
+            
+        </table>
+        <!-- <input type="number" id="number-input" required>
+        <button onclick="soNguyenTo()">
+            <h1>Submit</h1>
+        </button> -->
+        <h1 id="text-result"></h1>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-start align-items-center">
+            <div class="col-auto">
+                <label for="" class="col-form-label">Input Number</label>
+            </div>
+            <div class="col-auto">
+                <input type="number" id="number" class=" form-control"> 
+            </div>
+            <div class="col-auto">
+                <button class="btn btn-secondary" onclick="outSoNguyen()">Generate</button>
+            </div>
+        </div>
+        <table class="table text-center" id="number-result" >
+            
+        </table>
+
+    </div>
+    <script src="./loop.js"></script>
+</body>
+</html>

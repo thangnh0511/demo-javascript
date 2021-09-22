@@ -155,16 +155,14 @@ const CHECK_WIN = (arr,key) => {
             if(ARRAY__BOARD[e0][e1] == checkKey && count >= 1){
                 if(count ==5){
                     alert("win");
+                    displayGameBoard();
                 }
                 count++;
             } else if(ARRAY__BOARD[e0][e1]!= checkKey && count < 6) {
                 count = 1;
             } 
         }
-        // console.log(`count ` + count);
         return count;
-        // console.log(ARRAY__BOARD);
-    // } console.log(ARRAY__BOARD);
     } else {
         return 0;
     }

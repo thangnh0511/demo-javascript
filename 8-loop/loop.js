@@ -136,8 +136,7 @@ function calendarMaker() {
     console.log(cal);
     }
     
-       
-    
+   
 
     // document.getElementById('month-text').value = mess;
     document.getElementById("calendar").innerHTML = cal;
@@ -169,5 +168,136 @@ function outSoNguyen() {
 
 
 
+function chuNhat(width, height) {
+    let mess ='';
+    for(let i=1; i<=width; i++) {
+        for(let j=1; j<=height; j++) {
+            mess += '*';
+        } 
+        mess +='\n';
+    }
+    console.log(mess);
+}
 
-// console.log(CHECK_SO_NGUYEN(17));
+chuNhat(10,20)
+
+
+
+function chuNhatRong(width, height) {
+    let mess = '';
+    for(let i=1; i<= width; i++){
+        mess += "*";
+        for(let j=1; j<= height; j++){
+            if(i==width || i==1){
+                mess += "*";
+            } else {
+                mess += " ";
+            }
+        }
+        mess +="*\n";
+    }
+    console.log(mess);
+}
+
+// ------------------ Fibo --------------------
+chuNhatRong(20,50);
+
+
+
+const FIBO = (number) => {
+    let fibo =[0,1];
+    let mess = '0, 1, ';
+    for(let i=1; i<= (number-2); i++) {
+        // console.log(fibo[i]);
+        fibo.push(fibo[i-1]+fibo[i]);
+        mess += ', '+ fibo[i-1]+fibo[i];
+    }
+    console.log('Bài tập 1 - ' + '\t' + fibo);
+    // document.getElementById('text-result-fibo').innerHTML=mess;
+}
+
+FIBO(30);
+
+// ----------------------------------------------
+// ------------- FIBONACI -----------------------
+const FIBONACI = (number) => {
+    if(number === 1) {
+        return 0;
+    } else if (number < 3 && number > 1){
+        return 1;
+    } else if (number <= 0) {
+        return 'ERROR';
+    } else {
+        return FIBONACI(number-1) + FIBONACI(number -2 );
+    }
+}
+
+function outFibo(value) {
+    let mess = '';
+    for(let i=1; i<value; i++) {
+        mess += ', '+ FIBONACI(i);
+    }
+    console.log(mess);
+}
+
+outFibo(40);
+// -------------------------- END FIBONACI ---------------
+// -------------- SỐ CHIA HẾT CHO 7 -----------------
+const chiaHet7 = (number) => {
+    if(number%7 === 0) {
+        return 0 ;
+    } else {
+        return -1 ;
+    }
+}
+
+function outChiaHet7(value) {
+    let count = 1; 
+    let arr = [];
+    for(let i=1; i<=10000; i++){
+        if(chiaHet7(i) === 0) {
+            if(count > value) {
+                break;
+            } else {
+                arr.push(i);
+                count++; 
+            }
+        }
+    }    
+    console.log('Bài tập 2 - ' + arr);
+}
+
+outChiaHet7(30);
+
+
+
+// ----------- Hình tam giác ---------------
+function veTamGiac(number) {
+    let mess ='';
+    for(let i=1; i<number; i++){
+        for(let j=1; j<=i ; j++){
+            mess += '* ';
+        } 
+        mess += '\n';
+    }
+    console.log(mess);
+    document.getElementById('text-result-fibo').innerHTML = mess;
+}
+
+veTamGiac(10);
+
+
+
+//  Do - While 
+function sumUntil() {
+    let temp = '';
+    while(temp<=20 || temp >=100) {
+        temp = +prompt('Nhập nhiệt độ');
+        if(temp < 20) {
+            alert('Tăng nhiệt');
+        } else {
+            alert('giảm nhiệt');
+        }
+    }
+    document.getElementById('reusult-sum').innerHTML = sum;
+}

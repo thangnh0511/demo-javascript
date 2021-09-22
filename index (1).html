@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Biến</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">  
+    <style>
+        .box { 
+            width:600px;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #000;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            background: #fff;
+        }
+
+        .box input {
+            width: 100%;
+
+        }
+        .box .input-box {
+            margin: 10px 0;
+            display: flex;
+            justify-content: start;
+        }
+        .input-box > label {width: 200px;}
+
+        .input-box {
+            justify-content: space-between;
+            align-items: center;
+        }
+        #exchange-result {
+            width: 100%;
+            min-height: 40px;
+            line-height: 40px;
+            background: palegreen;
+            border-radius: 4px;
+            color: #000;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 0 10px ;
+        }
+        .result {
+            margin-top: 20px;
+            width: 100%;
+            min-height: 40px;
+            line-height: 40px;
+            background: palegreen;
+            border-radius: 4px;
+            color: #000;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 0 10px ;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        #calc {
+           
+        }
+        #calc > div {
+            width: 100%;
+            height: 40px;
+            margin: auto;
+        }
+
+        
+        .button-list-1 {
+            padding: 0 !important;
+            display: grid;
+            grid-template-columns: auto 25%;
+            margin-top: 10px !important;
+            justify-items: center;
+        }
+
+        .enter-btn {
+            width: calc(130px*3 + 16px*2);
+        }
+
+        .button-list {
+            padding: 0 !important;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            margin-top: 10px !important;
+            justify-items: center;
+           
+        }
+
+        .button-list > .col-3 ,.button-list-1 > .col-3 {
+            width: 130px !important;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Máy tính bỏ túi -->
+        <div class="box">
+            <h3>Calculate</h3>
+            <div id="calc" class="row">
+                <div id="showCalc" class="result col-12" style=" width: 565px !important; height: 60px;"></div>
+                <div class="button-list-1">
+                    <div class=" enter-btn btn btn-success" onclick="calculating()">Calculate</div>
+                    <div class="col-3 btn btn-outline-secondary" onclick="enterInput('/')">/</div>
+                </div>
+                <div class="button-list">
+                    <div class="col-3 btn btn-outline-secondary" onclick="enterInput(7)">7</div>
+                    <div class="col-3 btn btn-outline-secondary" onclick="enterInput(8)">8</div>
+                    <div class="col-3 btn btn-outline-secondary" onclick="enterInput(9)">9</div>
+                    <div class="col-3 btn btn-outline-secondary" onclick="enterInput('*')">x</div>
+                </div>
+                <div class="button-list">
+                    <div class="col-3 btn btn-outline-secondary" onclick="enterInput(4)">4</div>
+                    <div class="col-3 btn btn-outline-secondary" onclick="enterInput(5)">5</div>
+                    <div class="col-3 btn btn-outline-secondary" onclick="enterInput(6)">6</div>
+                    <div class="col-3 btn btn-outline-secondary" onclick="enterInput('-')">-</div>
+                </div>
+                <div class="button-list">
+                    <div class="col-3 btn btn-outline-secondary" onclick="enterInput(1)">1</div>
+                    <div class="col-3 btn btn-outline-secondary" onclick="enterInput(2)">2</div>
+                    <div class="col-3 btn btn-outline-secondary" onclick="enterInput(3)">3</div>
+                    <div class="col-3 btn btn-outline-secondary" onclick="enterInput('+')">+</div>
+                </div>
+                <div class="button-list">
+                    <div class="col-3 btn btn-danger" onclick="reset()">C</div>
+                    <div class="col-3 btn btn-outline-secondary" onclick="enterInput(0)">0</div>
+                    <div class="col-3 btn btn-outline-secondary" onclick="enterInput('.')">.</div>
+                    <div class="col-3 btn btn-success" onclick="calculating()">=</div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Bài toán máy tính bỏ túi -->
+        <div class="box row">
+            <h3>Máy tính mini</h3>
+            <div class="input-box justify-content-between">
+                <div class="col-3">
+                    <label for="calc-1">Số 1</label>
+                    <input type="number" id="calc-1">
+                </div>
+                <div class="col-2">
+                    <label for="calc-2">Phép tính</label>
+                    <select name="calc-select" id="calc-2" style="width: 100%;">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                    <label for="calc-3">Số 2</label>
+                    <input type="number" id="calc-3">
+                </div>
+                <div class="col-3">
+                    <div id="calc-result" class="result">
+
+                    </div>
+                </div>
+            </div>
+            <a onclick="calculate()" class="btn btn-primary">Tính</a>
+        </div>
+
+
+        <!-- Tính tuổi -->
+        <div class="box row">
+            <h3>Tính tuổi</h3>
+            <div class="input-box">
+                <!-- <div class="col-3">
+                    <label for="date-age">Ngày</label> <input type="number" id="date-age">
+                </div>
+                <div class="col-3">
+                    <label for="month-age">Tháng</label> <input type="number" id="month-age">
+                </div>
+                <div class="col-3">
+                    <label for="year-age">Năm sinh</label> <input type="number" id="year-age">
+                </div> -->
+                <label for="birthday">Năm sinh</label> <input type="date" id="birthday">
+
+            </div>
+            <a onclick="ageCalc()" class="btn btn-primary">Tính tuổi</a>
+            <div id="age" class="result"></div>
+        </div>
+
+        <!-- Chuyển đổi tiền tệ -->
+        <div class="box row">
+            <h3>Chuyển đổi tiền tệ</h3>
+            <div class="input-box justify-content-between">
+                <div class="col-3">
+                    <label for="ex-rate">Tỷ giá VND/USD</label>
+                    <input type="number" value="23000" id="ex-rate">
+                </div>
+                <div class="col-8">
+                    <label for="money">Nhập số tiền: </label> <input type="money" id="money">
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="col-3">
+                    <label for="exchange-from">Đổi từ</label>
+                    <select name="exchange-from" id="exchange-from">
+                        <option value="vnd">VND</option>
+                        <option value="usd">USD</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                    <label for="exchange-to">Sang</label>
+                    <select name="exchange-to" id="exchange-to">
+                        <option value="vnd">VND</option>
+                        <option value="usd">USD</option>
+                    </select>
+                </div>   
+                <div class="col-6">
+                    <div id="exchange-result"></div>
+                </div>
+
+            </div>
+            <a onclick="currencyExchange()" class="btn btn-primary">Chuyển đổi</a>
+
+        </div>
+        <div class="box row">
+            <h3>Hình tròn</h3>
+            <div class="input-box">
+                <label for="r">Nhập bán kính R</label> <input type="number" id="r">
+            </div>
+            <a onclick="hinhtron()" class="btn btn-primary">Tính</a>
+            <div id="result"></div>
+        </div>
+        <!-- Tạo thư -->
+        <div class="box row">
+            <h3>Thư của Marilyn Monroe</h3>
+            <div class="input-box">
+                <label for="name">Tên người nhận: </label> <input type="text" placeholder="Tên người nhận" id="name">
+            </div>
+            <div class="input-box">
+                <label for="address">Địa điểm: </label><input type="text" placeholder="Địa điểm" id="address">
+            </div>
+            <div class="input-box">
+                <label for="date">ngày: </label><input type="datetime" placeholder="ngày gửi" id="date">
+            </div>
+            <div class="input-box">
+                <label for="month">tháng: </label><input type="datetime" placeholder="ngày gửi" id="month">
+            </div>
+           <div class="input-box">
+                <label for="year">năm: </label><input type="datetime" placeholder="ngày gửi" id="year">
+           </div>
+            <a onclick="marilynMessage()" class="btn btn-primary">Mần thư</a>
+            <div id="marilyn_mess"></div>
+        </div>
+
+
+
+    </div>
+    <script src="function.js"></script>
+</body>
+</html>

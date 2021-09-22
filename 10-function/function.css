@@ -1,0 +1,61 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #FBF4E9;
+}
+
+.red {
+    color: red;
+    user-select: none;
+}
+.blue {
+    color: blue;
+    user-select: none;
+}
+tr,td {
+    border: 1px solid #506D84;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+table {
+    border-collapse: collapse ;
+
+}
+
+.game-wrap {
+    margin: 48px auto;
+    width: 506px;
+    height: 528px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    border: 4px solid #506D84;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+
+.again {
+    display: block;
+    margin: auto;
+    width: 300px;
+    height: 48px;
+    background-color: #FF5C58;
+    border-radius: 4px;
+    margin-top: 36px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 900;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.again:hover {
+    background-color:#ff7573;
+    color: aliceblue;
+}

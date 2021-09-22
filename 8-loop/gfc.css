@@ -27,7 +27,7 @@ body {
         justify-content: space-around;
 }
 
-#result, #text-result, #text-result-sn {
+#result, #text-result, #text-result-sn, #text-result-fibo, #reusult-sum {
     margin-left: 20px;
     color: #444444;
 }

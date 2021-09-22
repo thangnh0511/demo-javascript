@@ -8,16 +8,50 @@
     <link rel="stylesheet" href="./function.css">
 </head>
 <body>
-    <div class="game-wrap">
-        <table id="game-board">
-
-        </table>
-    </div>
+    <div class="container">
+        <div class="game-wrap">
+            <table id="game-board">
     
-    <button class="again" onclick="displayGameBoard()">
-        Play Again
-    </button>
+            </table>
+            <button class="again" onclick="displayGameBoard()">
+                Play Again
+            </button>
+        </div>
+        
+       
+    
+        <div class="note-wrap">
+            <h2>Lý thuyết function</h2>
+            <div class="split-line"></div>
+            <h4 class="blue">CÁCH TRUYỀN GIÁ TRỊ</h4>
+            <ul>
+                <li>Truyền tham chiếu (địa chỉ của biến): Array, Object </li>
+                <li>Truyền tham trị (giá trị của biến): String, Integer, .... </li>
+            </ul>
 
+            <h4 class="blue">CONTINUE - BREAK - RETURN</h4>
+            <ul>
+                <li>RETURN - trả về giá trị, phải tạo biến để trả về</li>
+                <li>CONTINUE - Bỏ qua câu lệnh bên dưới và tiếp tục vòng lặp</li>
+                <li>BREAK - Thoát ra khỏi vòng lặp</li>
+            </ul>
+            <br>
+            <h2>Bài tập</h2>
+            <div class="split-line"></div>
+            <ul>
+                <li>  BT1: Viet chuong trinh nhap vao tu ban phim 1 nam - kiem tra nam do la nam nhuan hay khong?</li>
+                <li>BT2: Viet chuong trinh chuyen doi nhiet do tu F -> C;
+                    Yeu cau: su dung ham;</li>
+                <li>BT3: Viet chuong trinh kiem tra mang doi xung
+                    vi du: arr = [1,2,3,2,1] -> doi xung
+                           arr2 = [1,2,3,1] -> khong doi xung</li>
+            </ul>
+            <!-- <input type="text" class="input-value" placeholder="Check Array đối xứng"><button class="btn" onclick="inputArray()" >Check</button> -->
+        </div>
+    </div>
+  
+
+    
     <script src="./function.js"></script>
 
 

@@ -168,7 +168,8 @@ const CHECK_WIN = (arr,key) => {
             if(ARRAY__BOARD[e0][e1] == checkKey && count >= 1){
                 if(count ==5){
                     alert("win");
-                    displayGameBoard();
+                    document.getElementById('game-board').style.user-select-none;
+                    // displayGameBoard();
                 }
                 count++;
             } else if(ARRAY__BOARD[e0][e1]!= checkKey && count < 6) {
@@ -182,3 +183,32 @@ const CHECK_WIN = (arr,key) => {
 }
 
 
+// ---------------- BAI TAP FUNCTION --------------------
+/*
+  BT1: Viet chuong trinh nhap vao tu ban phim 1 nam - kiem tra nam do la nam nhuan hay khong?
+  BT2: Viet chuong trinh chuyen doi nhiet do tu F -> C;
+  Yeu cau: su dung ham;
+  BT3: Viet chuong trinh kiem tra mang doi xung
+  vi du: arr = [1,2,3,2,1] -> doi xung
+         arr2 = [1,2,3,1] -> khong doi xung
+
+*/
+
+
+function checkBalanceArray(arr){
+    let count = 0;
+    for(let i=0; i< (arr.length / 2); i++){
+        if(!(arr[i] === arr[arr.length - 1 - i] )){
+           return false;
+    }
+    return true;
+}
+}
+
+let array = [1,2,3,4,5,6,7,6,5,4,3,2,1];
+
+if(checkBalanceArray(array) == true){
+    console.log('Doi Xung');
+} else {
+    console.log('Khong doi xung');
+}

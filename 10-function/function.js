@@ -24,6 +24,16 @@ console.log(ARRAY__BOARD);
 
 
 // ========================================================
+/*
+Step 1: Check around the point need to check, functions will run and RETURN ARRAY OF input point
+    ex: input [5,5] -> [0,5], [1,5], ...... accordion
+Step 2: CHECK_WIN function let input from 4 function beside and return count of checkpoint 
+    if this input point is frequently appear for 5 will return WIN
+    if input point will not -> count again from ONE 
+Step 3: Collect All in to GameOver function 
+
+*/
+
 function play(element, x, y) {
     if(ARRAY__BOARD[x][y] == "*"){
         if(player == 1) {
@@ -59,7 +69,7 @@ function gameOver(player,x,y) {
 
 
 // This 
-
+// CHECK - UP to DOWN
 const checkUpDown = (x, y) => {
     let up=''
     let down='';
@@ -80,6 +90,7 @@ const checkUpDown = (x, y) => {
     return arrToCheck;
 }
 
+// CHECK - LEFT to RIGHT
 const checkLeftRight = (x,y) => {
     let left ='';
     let right ='';
@@ -101,6 +112,7 @@ const checkLeftRight = (x,y) => {
 
 }
 
+// CHECK - CROSS LEFT to RIGHT
 const checkCrossLeftToRight = (x,y) => {
     let crossUp='';
     let crossDown='';
@@ -120,6 +132,7 @@ const checkCrossLeftToRight = (x,y) => {
     return arrToCheck;
 }
 
+// CHECK - CROSS LEFT to RIGHT reverse
 const checkCrossLeftToRight__Reverse = (x,y) => {
     let crossUp='';
     let crossDown='';
@@ -140,7 +153,7 @@ const checkCrossLeftToRight__Reverse = (x,y) => {
     
 }
 
-
+// CHECK WIN
 const CHECK_WIN = (arr,key) => {
     let checkArray = arr;
     let checkKey = key;

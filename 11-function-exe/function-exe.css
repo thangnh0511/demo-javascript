@@ -66,6 +66,14 @@ tr, td {
 .input-field>input {
     height: 24px;
 } */
+/* --------------------- */
+.wrap-container {
+    width: 100%;
+    display: flex;
+    flex-flow: wrap row;
+    /* position: relative; */
+}
+
 
 
 /* --------------------- */
@@ -99,8 +107,14 @@ tr, td {
     background-color: #EEEEEE;
     border-bottom: 1px solid #3D56B2;
     padding: 8px 0px;
-
+    cursor: pointer;
 }
+
+.catalogue-list:hover{
+    background-color: #E4e4e4;
+}
+
+
 .catalogue-item {
     /* padding-left: 20px; */
 }
@@ -131,12 +145,16 @@ tr, td {
 
 /* ----------------- */
 .update-console {
-    width: 600px;
+    width: 500px;
+    height: 100%;
     margin: 40px auto;
     padding: 20px;
     border: 1px solid #3D56B2;
     border-radius: 8px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 40px;
 }
 
 .update-console-title {
@@ -154,12 +172,15 @@ tr, td {
 .input-field > input {
     margin-left: 30px;
     height: 24px;
+    border-radius: 4px;
+    outline-offset: 0px;
 }
 
 .btn-field {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    margin-top: 20px;
 }
 
 .btn-function {

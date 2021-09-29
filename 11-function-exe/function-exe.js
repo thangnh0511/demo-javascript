@@ -16,8 +16,8 @@ function showListProduct() {
             html += products[i][j];
             html += '</td>';
         }
-        html += `<td><button onclick="deleteProduct(${i})" class="btn btn-delete">DELETE</button>`
-        html += `<button onclick="updateProduct(${i})" class="btn btn-update">UPDATE</button></td>`
+        html += `<td><button onclick="deleteProduct(${i})" id="btn btn-delete">DELETE</button>`
+        html += `<button onclick="updateProduct(${i})" id="btn btn-update">UPDATE</button></td>`
         html += '</tr>';
     }
 

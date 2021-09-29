@@ -48,13 +48,25 @@
                 <label for="">Price</label><input type="number" id="prd-price">
             </div>
             <div class="input-field">
-                <label for="">Authority</label><input type="text" id="prd-auth">
+                <label for="">Manufacturer</label><input type="text" id="prd-auth">
             </div>
-            <div class="btn-field">
-                <span class="btn-function"><img src="./icon/add.svg" alt=""></span>
-                <span class="btn-function"><img src="./icon/delete.svg" alt=""></span>
-                <span class="btn-function"><img src="./icon/update.svg" alt=""></span>
-                <span class="btn-function"><img src="./icon/save.svg" alt=""></span>
+            <div class="btn-field" id="btn-field-js">
+                <span class="btn-function" id="add" onclick="addItem()">
+                    <img src="./icon/add.svg" alt="">
+                    Add Product
+                </span>
+                <span class="btn-function" id="save" onclick="">
+                    <img src="./icon/save.svg" alt="">
+                    Save
+                </span>
+                <span class="btn-function" id="update" onclick="updateItem()">
+                    <img src="./icon/update.svg" alt="">
+                    Update
+                </span>
+                <span class="btn-function" id="delete" onclick="deteleItem()">
+                    <img src="./icon/delete.svg" alt="">
+                    Delete 
+                </span>
             </div>
         </div>
         
@@ -64,7 +76,7 @@
                 <div class="catalogue-title--header">Name</div>
                 <div class="catalogue-title--header">Price</div>
                 <div class="catalogue-title--header">Auth</div>
-                <div class="catalogue-title--header">Option</div>
+                <!-- <div class="catalogue-title--header">Option</div> -->
             </div>
             <div id="products-list">
                

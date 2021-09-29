@@ -212,3 +212,39 @@ if(checkBalanceArray(array) == true){
 } else {
     console.log('Khong doi xung');
 }
+
+
+function isPrime(number) {
+    if(number <2){
+        console.log("number < 2");
+        return false;
+    } else if(number == 2) {
+        return true;
+    } else {
+        for(let i=2; i < number; i++){
+            if(number%i == 0){
+                return false;
+            }
+        }
+        return true;
+
+    }
+}
+
+isPrime(2);
+
+function displayNumberPrime(number){
+
+}
+
+function minInArray(arr) {
+    let  min = arr[0];
+    for(item of arr){
+        if(item <= min) {
+            min = item; 
+        }  
+    }
+    return min;
+}
+
+console.log(minInArray([1,2,3,4,2,21,3,0,-1]));

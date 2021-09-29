@@ -12,16 +12,22 @@ function showListProduct() {
         html += `<div class="catalogue-list">
             <div class="catalogue-item">${i+1}</div>`;
         for(let j=0; j<products[0].length; j++) {
-            html += `<div class="catalogue-item">${products[i][j]}</div>`;
+            if(!(j==2)){
+                html += `<div class="text-align-left catalogue-item">${products[i][j]}</div>`;
+            } else {
+                html += `<div class="catalogue-item">${products[i][j]}</div>`;
+            }
+            // html += `<div class="catalogue-item">${products[i][j]}</div>`;
         }
-        html += ` <div class="catalogue-item">
-        <button class="btn btn-delete">Delete</button>
-        <button class="btn btn-update">Update</button>
+        html += `<div class="catalogue-item">
+        <i class="delete far fa-trash-alt"></i>                
+        <i class="update far fa-edit"></i>
         </div>`;
         html += `</div>`;
     }
     console.log(html);
-    document.getElementById('products-list-custom').innerHTML = html;
+    document.getElementById("products-list").innerHTML = html;
 }
 
+showListProduct();
 

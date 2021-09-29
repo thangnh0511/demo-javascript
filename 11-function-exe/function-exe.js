@@ -22,6 +22,7 @@ function showListProduct() {
     }
 
     document.getElementById('list-product').innerHTML = html;
+
 }
 
 showListProduct();

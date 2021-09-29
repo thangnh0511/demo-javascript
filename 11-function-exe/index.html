@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Function Exec</title>
     <link rel="stylesheet" href="./function-exe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.google.com/icons?selected=Material%20Icons%20Outlined%3Alibrary_add%3A">
 </head>
 <body>
 
@@ -34,9 +36,28 @@
         <tbody id="list-product">
 
         </tbody>
-    </table> -->
-
-
+    </table>
+ -->
+    <div class="update-console">
+        <h2 class="update-console-title">Product Information</h2>
+        <div class="input-field">
+            <label for="">Product name</label><input type="text" id="prd-name">
+        </div>
+        <div class="input-field">
+            <label for="">Price</label><input type="number" id="prd-price">
+        </div>
+        <div class="input-field">
+            <label for="">Authority</label><input type="text" id="prd-auth">
+        </div>
+        <div class="btn-field">
+            <span class="btn-function"><img src="./icon/add.svg" alt=""></span>
+            <span class="btn-function"><img src="./icon/delete.svg" alt=""></span>
+            <span class="btn-function"><img src="./icon/update.svg" alt=""></span>
+            <span class="btn-function"><img src="./icon/save.svg" alt=""></span>
+        </div>
+    </div>
+    
+    </div>
     <div id="catalogue">
         <div class="catalogue-title">
             <div class="catalogue-title--header">STT</div>
@@ -45,26 +66,9 @@
             <div class="catalogue-title--header">Auth</div>
             <div class="catalogue-title--header">Option</div>
         </div>
-        <div class="catalogue-list">
-            <div class="catalogue-item">1</div>
-            <div class="catalogue-item">Iphone Xs Max</div>
-            <div class="catalogue-item">Price</div>
-            <div class="catalogue-item">Apple</div>
-            <div class="catalogue-item">Option</div>
+        <div id="products-list">
+           
         </div>
-        <div class="catalogue-list">
-            <div class="catalogue-item">1</div>
-            <div class="catalogue-item">Iphone Xs Max</div>
-            <div class="catalogue-item">Price</div>
-            <div class="catalogue-item">Apple</div>
-            <div class="catalogue-item">
-                <button class="btn btn-delete">Delete</button>
-                <button class="btn btn-update">Update</button>
-            </div>
-        </div>
-        <tbody id="products-list-custom">
-            
-        </tbody>
     </div>
    
 

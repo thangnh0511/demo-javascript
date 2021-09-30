@@ -102,11 +102,17 @@ function updateItem() {
     let auth = document.getElementById('prd-auth').value;
 
     let product = [name, price, auth];
-
-    products[index] = product;
-
-    clearScreen();
-    showListProduct();
+    if(confirm(`
+        PRODUCT ID #00000${index}
+        Product name: ${name}
+        Price: ${price}
+        Manufacturer: ${auth} 
+    `)) {
+        products[index] = product;
+        clearScreen();
+        showListProduct();
+    }
+   
 
     console.log('UPDATE FUNCTION - working ok');
 }
@@ -126,14 +132,29 @@ function saveItem() {
 
     let product = [name, price, auth];
 
-    console.log(product);
-    products.push(product);
+    let check = checkInput(name,price,auth);
 
-    showListProduct();
-    statusButtonSet('initial');
-    clearScreen();
+    if(check === 1) {
+        products.push(product);
+        showListProduct();
+        statusButtonSet('initial');
+        clearScreen();
+    } else {
+        alert("Please fulfill before submit !");
+    }
+
+    
 }
 
+
+// ------------- Check required -------------------------
+function checkInput(name, price, auth){
+    if(name != ''&& price != '' && auth != ''){
+        return 1;
+    } else {
+        return 0;
+    }
+}
 
 // ------------- Disable & Active button ----------------
 function statusButtonSet(br){

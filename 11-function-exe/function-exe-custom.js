@@ -9,6 +9,7 @@ let products = [
     ['Mi Mix', 12000000, 'Xiaomi'],
     ['Mi band 6', 600000, 'Xiaomi'],
     ['Iphone 13', 35000000, 'Apple'],
+    ['Quẩy hậu dịch', 'Why not ?', 'Nam House'],
     ['Iphone 6s', 3000000, 'Apple'],
     ['Mi Mix', 12000000, 'Xiaomi'],
     ['Mi band 6', 600000, 'Xiaomi'],

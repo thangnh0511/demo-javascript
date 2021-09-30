@@ -84,6 +84,7 @@ tr, td {
     min-height: 300px;
     margin: 40px auto;
     /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+
 }
 
 .catalogue-title {
@@ -95,6 +96,8 @@ tr, td {
     color: #fff;
     border-radius: 8px 8px 0px 0px;
     font-size: 18px;
+    padding: 8px 0px;
+
 }
 
 .catalogue-title--header {
@@ -110,6 +113,7 @@ tr, td {
     border-bottom: 1px solid #3D56B2;
     padding: 8px 0px;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .not-choice:hover{

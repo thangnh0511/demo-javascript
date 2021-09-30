@@ -31,7 +31,7 @@ const BUTTON__STATUS = {
         delete: 'disable'
     },
     updateItem: {
-        add: 'disable',
+        add: 'active',
         save: 'disable',
         update: 'active',
         delete: 'active'
@@ -126,10 +126,22 @@ function updateItem() {
 function addItem() {
     let index = document.getElementById('prd-name').getAttribute('dataId');
     statusButtonSet('addItem');
+    clearScreen();
 }
 
 function saveItem() {
-    let index = document.getElementById('prd-name').getAttribute('dataId');
+    let name = document.getElementById('prd-name').value;
+    let price = document.getElementById('prd-price').value;
+    let auth  = document.getElementById('prd-auth').value;
+
+    let product = [name, price, auth];
+
+    console.log(product);
+    products.push(product);
+
+    showListProduct();
+    statusButtonSet('initial');
+    clearScreen();
 }
 
 
@@ -139,7 +151,7 @@ function statusButtonSet(br){
     let addFunction = 'addItem()';
 
     let saveStatus = '';
-    let saveFunction = '';
+    let saveFunction = 'saveItem()';
 
     let updateStatus = '';
     let updateFunction = 'updateItem()';
@@ -163,7 +175,6 @@ function statusButtonSet(br){
         updateStatus = BUTTON__STATUS.updateItem.update;
         deleteStatus = BUTTON__STATUS.updateItem.delete;
 
-        addFunction = ''; 
         saveFunction = '';
 
     } else if (br === 'addItem') {
@@ -186,7 +197,7 @@ function statusButtonSet(br){
         <img src="./icon/save.svg" alt="">
         Save
     </span>
-    <span class="btn-function ${updateStatus}" id="update" onclick="${updateStatus}">
+    <span class="btn-function ${updateStatus}" id="update" onclick="${updateFunction}">
         <img src="./icon/update.svg" alt="">
         Update
     </span>

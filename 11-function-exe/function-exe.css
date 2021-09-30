@@ -240,3 +240,29 @@ tr, td {
     font-weight: 600;
     letter-spacing:2px;
 }
+
+.info-block {
+    width: 100%;
+    min-height: 200px;
+    background-color: #F6F6F6;
+    padding: 20px;
+    margin-top: 40px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.info-title {
+    font-size: 16px;
+    font-weight: 600;
+    width: 100px;
+    display: inline-block;
+    color: #14279B;
+}
+
+.info-title a { 
+    text-decoration: none;
+}
+
+.info-content {
+    margin: 20px 10px;
+}
